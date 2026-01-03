@@ -7,7 +7,10 @@
 
 1. **Reasoning**: Проанализируй задачи и Invariant Checks для ТЕКУЩЕЙ фазы. Декомпозируй её на подзадачи.
 2. **Execution**: Реализуй код, строго следуя @CLAUDE.md. Если в фазе указаны новые крейты или API — сначала используй инструменты поиска документации.
-3. **QA**: Выполни `cargo-check` и `cargo-clippy`. При ошибках — читай `rustc-explain`, не гадай. 
+3. **QA**: Выполни `cargo-check` и `cargo-clippy`. 
+   - **CRITICAL**: НЕ удаляй скелеты функций, неиспользуемые структуры или импорты, которые пригодятся в следующих фазах (см. Invariant Checks и Blueprint). 
+   - Настраивай `#[allow(dead_code)]` или используй `todo!()` вместо удаления.
+   - При ошибках — читай `rustc-explain`, не гадай. 
 4. **Sync**: 
    - Отмечай выполненное в @IMPLEMENTATION_BLUEPRINT.md.
    - Оставь в конце файла "Handover Note" в файле @IMPLEMENTATION_BLUEPRINT.md для следующей фазы.
