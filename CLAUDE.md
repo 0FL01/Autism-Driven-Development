@@ -42,10 +42,8 @@ src/
 
 ### 3. Documentation (Anti-Hallucination)
 **DO NOT GENERATE CODE FROM MEMORY.** Crates change often.
-1. `search_crate` → find package
-2. `search_documentation_items` → fuzzy search
-3. `retrieve_documentation_page` → READ docs
-4. `retrieve_documentation_all_items` → fallback only
+1. `tavily_search` → find package and overview
+2. `tavily_extract` → READ specific documentation pages
 
 ### 4. Error Resolution
 On error code (e.g. `E0507`):
@@ -71,4 +69,4 @@ On error code (e.g. `E0507`):
 | "What is error E0xxx?" | `rustc-explain E0xxx` |
 | "Clean up unused deps" | `cargo-machete` |
 | "Check detailed compatibility" | `cargo-hack` |
-| "Find how to use Vec" | `search_documentation_items` -> `retrieve_documentation_page` |
+| "Find how to use Vec" | `tavily_search` -> `tavily_extract` |
