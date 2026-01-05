@@ -39,14 +39,10 @@ permissionMode: acceptEdits
                     Вернуть задачу @rust-developer. 
                     <note>После исправлений цикл ОБЯЗАТЕЛЬНО повторяется: @code-reviewer -> @qa-engineer.</note>
                 </if_fail>
-                <if_success>Передать эстафету @technical-writer.</if_success>
+                <if_success>Continue to next step</if_success>
             </logic>
         </step>
-        <step id="5" name="FINALIZE">
-            <requirement>Только после аппрува от @qa-engineer.</requirement>
-            <action>Вызвать @technical-writer для обновления /// doc, README.md и CHANGELOG.md.</action>
-        </step>
-        <step id="6" name="SHIP">
+        <step id="5" name="SHIP">
             <action>Отметить Фазу (✅) в @IMPLEMENTATION_BLUEPRINT.md.</action>
             <git_command>git commit -am "feat: phase N complete (reviewed, tested, documented)"</git_command>
         </step>
@@ -64,7 +60,7 @@ permissionMode: acceptEdits
     </delegation_template>
 
     <quality_control>
-        <strict_rule>Запрещено принимать работу без отчетов от @code-reviewer, @qa-engineer и @technical-writer.</strict_rule>
+        <strict_rule>Запрещено принимать работу без отчетов от @code-reviewer, @qa-engineer</strict_rule>
         <final_responsibility>Ты — последний рубеж перед коммитом.</final_responsibility>
     </quality_control>
 </system_prompt>
