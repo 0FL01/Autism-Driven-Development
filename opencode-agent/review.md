@@ -1,8 +1,9 @@
 ---
 description: Code Quality Gate. Reviews staged changes before commit.
 mode: subagent
-model: google/antigravity-gemini-3-pro-high
-temperature: 0.1
+model: zai-coding-plan/glm-4.7
+#model: google/antigravity-gemini-3-pro-high
+#temperature: 0.9
 tools:
   write: false
   edit: false

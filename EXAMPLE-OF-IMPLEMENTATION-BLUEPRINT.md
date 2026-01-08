@@ -28,7 +28,7 @@
 
 ### Пример структуры IMPLEMENTATION_BLUEPRINT.md
 
-## Phase 1: Networking Layer & Stream Processing ✅
+## Phase 1: Networking Layer & Stream Processing [ ]
 
 **Goal**: Implement an asynchronous TCP listener with custom frame decoding.
 
@@ -50,7 +50,7 @@ Before implementing the `Decoder` trait, use `tavily_extract` to retrieve the do
 [!NOTE]
 Check `workspace-info` to ensure `tokio` version consistency across the workspace.
 
-## Phase 2: Credit Ledger Logic ✅
+## Phase 2: Credit Ledger Logic [ ]
 
 **Goal**: Implement the transaction processing engine.
 
